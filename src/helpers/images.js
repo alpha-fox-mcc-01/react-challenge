@@ -36,7 +36,7 @@ const imageList = [
         url: 'https://musicart.xboxlive.com/7/ac355100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080'
     },
     {
-        title: 'my neighbor the yamadas',
+        title: 'my neighbors the yamadas',
         url: 'https://images-na.ssl-images-amazon.com/images/I/91STSIsHh0L._SL1500_.jpg'
     },
     {
@@ -72,7 +72,7 @@ const imageList = [
         url: 'https://storage.googleapis.com/old_img_diary/files/images/2014/05/01/1e370THE-WIND-RISES.jpg'
     },
     {
-        title: 'the tale of princess kaguya',
+        title: 'the tale of the princess kaguya',
         url: 'https://image.tmdb.org/t/p/w500//11Az4sMt1C9sm8atgB199Z0BsIQ.jpg'
     },
     {

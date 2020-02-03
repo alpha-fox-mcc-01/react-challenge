@@ -3,18 +3,14 @@ import './App.css';
 import ListContainer from './ListContainer'
 import instance from './helpers/axiosinstance'
 import Searchbar from './Searchbar'
-import imageList from './helpers/images'
 
 function App() {
   const [films, setFilms] = useState([])
   const [result, setResult] = useState([])
-  const [images, setImages] = useState([])
   useEffect(() => {
     instance.get('/films')
     .then(({ data }) => {
       setFilms(data)
-      setImages(imageList)
-    
     })
     .catch(err => {
       console.log(err)
