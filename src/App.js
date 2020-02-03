@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import PokemonsChart from './PokemonChart'
+import axios from 'axios'
+import SearchBar from './SearchBar'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  state = {
+    currentPokemon: {},
+  }
+
+  render() {
+    return (
+      <div className='container'>
+        <SearchBar getPokemon={ this.getPokemon }/><hr />
+        {this.state.currentPokemon.hasOwnProperty('id') && 
+        <PokemonsChart 
+          currentPokemon={ this.state.currentPokemon } 
+        />}
+      </div>
+    )
+  }
+
+  getPokemon = (keyword) => {
+    axios({
+      method: "GET",
+      url: "https://pokeapi.co/api/v2/pokemon/" + keyword
+    })
+      .then(({ data }) => {
+        this.setState({ currentPokemon: data })
+      })
+      .catch(console.log)
+  }
 }
 
-export default App;
+export default App
