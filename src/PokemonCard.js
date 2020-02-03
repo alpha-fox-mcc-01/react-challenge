@@ -4,17 +4,18 @@ export class PokemonCard extends Component {
     render() {
         const { pokemon } = this.props
         let cardStyle = {
-            width: '30rem',
-            marginLeft: 'auto',
+            width: '37rem',
+            // marginLeft: 'auto',
             marginRight: 'auto',
-            height: '50rem'
+            height: '45rem'
         }
         return (
             <div className="card" style={cardStyle}>
                 <img className="card-img-top" src={ pokemon.sprites.front_default } alt="Pokemon_Image" />
                 <div className="card-body">
-                    <h1 className="card-title">{ pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) }</h1>
-                        {pokemon.stats.map((field, i) => <p className="card-text" key={i} >&bull;&nbsp;{field.stat.name}: {field.base_stat}</p>)}
+                    <h1 className="card-title">{ pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) }</h1><hr />
+                    <h5>Type: { pokemon.types[0].type.name }</h5><hr />
+                    {pokemon.stats.map((field, i) => <p className="card-text" key={i} >&bull;&nbsp;{field.stat.name}: {field.base_stat}</p>)}
                 </div>
             </div>
         )

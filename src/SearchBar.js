@@ -11,9 +11,9 @@ export class SearchBar extends Component {
                 <div className="form-group">
                     <label htmlFor="exampleInputKeyword1">Search For Your Pokemon!</label>
                     <input type="text" value={ this.state.keyword } onChange={this.handleChange} className="form-control" id    ="exampleInputKeyword1" aria-describedby="KeywordHelp" placeholder="Enter Keyword" /><br />
-                    <input type="submit" value='Search!' className="btn btn-primary" />
+                    <input type="submit" value='Search!' className="btn btn-info" id='search-btn' />
                 </div>
-            </form>
+            </form> 
         )
     }
     

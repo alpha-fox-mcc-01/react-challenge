@@ -4,7 +4,7 @@ import PokemonCard from './PokemonCard'
 export class PokemonChart extends Component {
     render() {
         return (
-            <PokemonCard pokemon={ this.props.currentPokemon }/>
+            <PokemonCard pokemon={ this.props.pokemon }/>
         )
     }
 }
