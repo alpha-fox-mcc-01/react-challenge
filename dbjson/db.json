@@ -1,0 +1,58 @@
+{
+  "movies": [
+    {
+      "title": "Fantastic Beasts and Where to Find Them ",
+      "year": "2016",
+      "length": "2h 12min",
+      "rating": "7.3",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjMxOTM1OTI4MV5BMl5BanBnXkFtZTgwODE5OTYxMDI@.jpg",
+      "plot": "The adventures of writer Newt Scamander in New York's secret community of witches and wizards seventy years before Harry Potter reads his book in school.",
+      "id": 1
+    },
+    {
+      "title": "The Irishman ",
+      "year": "2019",
+      "length": "3h 29min",
+      "rating": "8.0",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGUyM2ZiZmUtMWY0OC00NTQ4LThkOGUtNjY2NjkzMDJiMWMwXkEyXkFqcGdeQXVyMzY0MTE3NzU@.jpg",
+      "plot": "A mob hitman recalls his friend .",
+      "id": 2
+    },
+    {
+      "title": "Inception ",
+      "year": "2010",
+      "length": "2h 28min",
+      "rating": "8.8",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@.jpg",
+      "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+      "id": 4
+    },
+    {
+      "title": "Suicide Squad ",
+      "year": "2016",
+      "length": "2h 3min",
+      "rating": "6.0",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@.jpg",
+      "plot": "A secret government agency recruits some of the most dangerous incarcerated super-villains to form a defensive task force. Their first mission: save the world from the apocalypse.",
+      "id": 5
+    },
+    {
+      "title": "Black Panther ",
+      "year": "2018",
+      "length": "2h 14min",
+      "rating": "7.3",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@.jpg",
+      "plot": "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
+      "id": 6
+    },
+    {
+      "title": "John Wick ",
+      "year": "2014",
+      "length": "1h 41min",
+      "rating": "7.4",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@.jpg",
+      "plot": "An ex-hit-man comes out of retirement to track down the gangsters that killed his dog and took everything from him.",
+      "id": 7
+    }
+  ]
+}
