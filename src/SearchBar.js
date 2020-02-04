@@ -8,10 +8,14 @@ export default function SearchBar(props) {
   }
 
   return (
-    <form>
-      <div className="form-row">
-        <input onChange={(event) => search(event.target.value)} value={keyword} type="text" className="form-control" placeholder="search" ></input>
+    <div className="card">
+      <div className="card-body">
+        <form>
+          <div className="form-row">
+            <input onChange={(event) => search(event.target.value)} value={keyword} type="text" className="form-control" placeholder="search" ></input>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
   )
 }
