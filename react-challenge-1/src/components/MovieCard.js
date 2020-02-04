@@ -1,12 +1,19 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 export default function MovieCard(props) {
+  let history = useHistory();
+
   const getStyle = (rating) => {
     let textColor = 'text-success';
     if (rating < 7) {
       textColor = 'text-danger';
     }
     return <span className={ textColor }>{ rating }</span>
+  }
+
+  const showDetail = (id) => {
+    history.push('/movies/' + id);
   }
 
   const { id, title, year, length, rating, poster, plot } = props.movie;
@@ -20,6 +27,10 @@ export default function MovieCard(props) {
           <p className="card-text">{ plot }</p>
           <p className="card-text">Length: { length }</p>
           <h5 className="card-text">Rating: { getStyle(rating) }</h5>
+          <button
+            className="btn-sm btn-info btn-del mt-3"
+            onClick={() => showDetail(id) }
+          >Detail</button>
           <button
             className="btn-sm btn-danger btn-del mt-3"
             onClick={() => props.delete('movies', id) }

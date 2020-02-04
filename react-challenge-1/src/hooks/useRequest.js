@@ -9,7 +9,7 @@ export default function useRequest (endpoint) {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:3000/${endpoint}?_sort=id&_order=desc`)
+      .get(`http://localhost:3000/${endpoint}?_sort=createdAt&_order=desc`)
       .then(({ data }) => {
         setData(data);
         setLoading(false);
@@ -17,7 +17,7 @@ export default function useRequest (endpoint) {
       .catch(({ response: { data } }) => {
         setError(data);
       });
-  }, []);
+  }, [endpoint]);
 
   const handlePost = (endpoint, body) => {
     axios

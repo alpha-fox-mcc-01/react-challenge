@@ -89,7 +89,7 @@ export default function AddMovie(props) {
       }
     })
       .then(({ data }) => {
-        const { title, year, length, rating, poster, plot } = data;
+        const { id, title, year, length, rating, poster, plot } = data;
         if (!year) {
           Swal.fire({
             icon: 'error',
@@ -97,7 +97,7 @@ export default function AddMovie(props) {
             text: 'Movie not found',
           });
         } else {
-          props.save('movies', { title, year, length, rating, poster, plot });
+          props.save('movies', { id, title, year, length, rating, poster, plot, createdAt: new Date() });
         }
       })
       .catch(console.log);
@@ -113,7 +113,7 @@ export default function AddMovie(props) {
 
   return (
     <form
-      className="addMovieForm"
+      className="col-8 offset-2"
       onSubmit={ onSubmit }
     >
     <div className="form-group">

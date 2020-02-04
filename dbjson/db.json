@@ -1,85 +1,64 @@
 {
   "movies": [
     {
-      "title": "The Irishman ",
-      "year": "2019",
-      "length": "3h 29min",
-      "rating": "8.0",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGUyM2ZiZmUtMWY0OC00NTQ4LThkOGUtNjY2NjkzMDJiMWMwXkEyXkFqcGdeQXVyMzY0MTE3NzU@.jpg",
-      "plot": "A mob hitman recalls his friend .",
-      "id": 2
-    },
-    {
+      "id": "tt1375666",
       "title": "Inception ",
       "year": "2010",
       "length": "2h 28min",
       "rating": "8.8",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@.jpg",
       "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-      "id": 4
+      "createdAt": "2020-02-04T09:33:37.378Z"
     },
     {
+      "id": "tt1386697",
       "title": "Suicide Squad ",
       "year": "2016",
       "length": "2h 3min",
       "rating": "6.0",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@.jpg",
       "plot": "A secret government agency recruits some of the most dangerous incarcerated super-villains to form a defensive task force. Their first mission: save the world from the apocalypse.",
-      "id": 5
+      "createdAt": "2020-02-04T09:33:43.940Z"
     },
     {
-      "title": "Black Panther ",
-      "year": "2018",
-      "length": "2h 14min",
-      "rating": "7.3",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@.jpg",
-      "plot": "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
-      "id": 6
+      "id": "tt1302006",
+      "title": "The Irishman ",
+      "year": "2019",
+      "length": "3h 29min",
+      "rating": "8.0",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMGUyM2ZiZmUtMWY0OC00NTQ4LThkOGUtNjY2NjkzMDJiMWMwXkEyXkFqcGdeQXVyMzY0MTE3NzU@.jpg",
+      "plot": "A mob hitman recalls his friend .",
+      "createdAt": "2020-02-04T09:33:58.990Z"
     },
     {
+      "id": "tt2911666",
       "title": "John Wick ",
       "year": "2014",
       "length": "1h 41min",
       "rating": "7.4",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@.jpg",
       "plot": "An ex-hit-man comes out of retirement to track down the gangsters that killed his dog and took everything from him.",
-      "id": 7
+      "createdAt": "2020-02-04T10:49:45.727Z"
     },
     {
-      "title": "Harry Potter and the Sorcerer's Stone ",
-      "year": "2001",
-      "length": "2h 32min",
-      "rating": "7.6",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@.jpg",
-      "plot": "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.",
-      "id": 8
+      "id": "tt0993846",
+      "title": "The Wolf of Wall Street ",
+      "year": "2013",
+      "length": "3h",
+      "rating": "8.2",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@.jpg",
+      "plot": "Based on the true story of , from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+      "createdAt": "2020-02-04T12:17:11.168Z"
     },
     {
-      "title": "Titanic ",
-      "year": "1997",
-      "length": "3h 14min",
+      "id": "tt0765429",
+      "title": "American Gangster ",
+      "year": "2007",
+      "length": "2h 37min",
       "rating": "7.8",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@.jpg",
-      "plot": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
-      "id": 9
-    },
-    {
-      "title": "Jack Reacher ",
-      "year": "2012",
-      "length": "2h 10min",
-      "rating": "7.0",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTM1NjUxMDI3OV5BMl5BanBnXkFtZTcwNjg1ODM3OA@@.jpg",
-      "plot": "A homicide investigator digs deeper into a case involving a trained military sniper who shot five random victims.",
-      "id": 10
-    },
-    {
-      "title": "Mission: Impossible - Fallout ",
-      "year": "2018",
-      "length": "2h 27min",
-      "rating": "7.8",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjRlZmM0ODktY2RjNS00ZDdjLWJhZGYtNDljNWZkMGM5MTg0XkEyXkFqcGdeQXVyNjAwMjI5MDk@.jpg",
-      "plot": "Ethan Hunt and his IMF team, along with some familiar allies, race against time after a mission gone wrong.",
-      "id": 12
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjFmZGI2YTEtYmJhMS00YTE5LWJjNjAtNDI5OGY5ZDhmNTRlXkEyXkFqcGdeQXVyODAwMTU1MTE@.jpg",
+      "plot": "An outcast New York City cop is charged with bringing down Harlem drug lord Frank Lucas, whose real life inspired this partly biographical film.",
+      "createdAt": "2020-02-04T12:17:28.474Z"
     }
   ]
 }
