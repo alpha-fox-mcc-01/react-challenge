@@ -33,8 +33,13 @@ function App() {
     width: '350px',
     height: '100%'
   }
-  
-  if (loading) return <p>Loading....</p>
+  const loadGif = {
+    margin: '0 auto',
+    width: '200px',
+    height: '200px'
+  }
+
+  if (loading) return <img style={loadGif} src="https://avatarfiles.alphacoders.com/890/89063.gif" alt="jumpingtoto" />
   if (error) return <p>Oops... An Error Occured</p>
   return (
     <Router>

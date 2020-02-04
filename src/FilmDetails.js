@@ -18,12 +18,12 @@ export function FilmDetails(props) {
    }
 
    const imageStyle = {
-     width: '500px',
-     maxHeight: '100%'
+     width: '100%',
+     height: '268px',
+     objectFit: 'fill',
    }
    const descContainer = {
-     justifyContent: 'center',
-     padding: '2rem'
+     justifyContent: 'flex-start'
    }
    const tomatoStyle = {
      width: '48px',
@@ -34,36 +34,54 @@ export function FilmDetails(props) {
      margin: '0 auto'
    }
 
+   const loadGif = {
+     margin: '0 auto',
+     width: '200px',
+     height: '200px'
+   }
+
    const rating = {
     fontSize: 'x-large',
     color: 'white'
    }
+   const fonts = {
+     color: 'white',
+     margin: '0 auto'
+   }
+   const video = {
+   }
 
-   if (loading) return <p>Loading....</p>
+   if (loading) return <img style={loadGif} src="https://avatarfiles.alphacoders.com/890/89063.gif" alt="jumpingtoto" />
    if (error) return <p>Oops... An Error Occured</p>
   return (
-    <div style={container} className="w-2/3 relative"> 
-    <div style={upperStyles} className="flex-col bg-white shadow">
-    <h1 style={titleStyles}>{data.title} ({data.release_date})</h1>
-    <p>Directed by {data.director}</p><br/>
-    <div className="rating">
-    <img style={tomatoStyle} src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/1009px-Rotten_Tomatoes.svg.png" alt="rottentomato" /> 
-    <p style={rating}>{data.rt_score}%</p> 
-    </div>
-    <p>Tomatometer</p>
-    </div>
-    <div className="flex mb-4 flex-wrap">
-      <div style={descContainer} className="w-1/2 h-12 flex">
-      { data.title ? imageList.map( image => {
-            if (image.title.toLowerCase() === data.title.toLowerCase()) {
-              return <img src={image.url} alt='filmposter' key={image.title} />
-      }}) : '' }
+    <div style={container} className="w-2/3 flex-wrap"> 
+      <div style={upperStyles} className="flex flex-wrap bg-white shadow">
+        <div style={descContainer} className="w-2/3">
+          <h1 style={titleStyles}>{data.title} ({data.release_date})</h1>
+          <p style={fonts}>Directed by {data.director}</p><br/>
+        </div>
+        <div  style={descContainer} className="w-1/3 rating">
+          <img style={tomatoStyle} src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/1009px-Rotten_Tomatoes.svg.png" alt="rottentomato" /> 
+          <p style={rating}>{data.rt_score}%</p> 
+          <p style={fonts}>Tomatometer</p>
+        </div>
       </div>
-      <div style={descContainer} className="w-1/2 h-12">
-      <p>{data.description}</p>
-      <iframe width="280" height="175" src="https://www.youtube.com/embed/8ykEy-yPBFc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div className="flex mb-4 flex-wrap">
+        <div style={descContainer} className="w-1/4">
+          { data.title ? imageList.map( image => {
+                if (image.title.toLowerCase() === data.title.toLowerCase()) {
+                  return <img className="w-full" style={imageStyle} src={image.url} alt='filmposter' key={image.title} />
+          }}) : '' }
+        </div>
+        <div style={descContainer} className="w-3/4">
+          <iframe className="w-full" style={video} width="477" height="268" src="https://www.youtube.com/embed/8ykEy-yPBFc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
-    </div>
+      <div>
+        <div style={descContainer}  className="w-full">
+          <p>{data.description}</p>
+        </div>
+      </div>
     </div>
   )
 }
