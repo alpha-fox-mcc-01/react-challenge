@@ -89,14 +89,15 @@ export default function AddMovie(props) {
       }
     })
       .then(({ data }) => {
-        if (!data.year) {
+        const { title, year, length, rating, poster, plot } = data;
+        if (!year) {
           Swal.fire({
             icon: 'error',
             title: 'Sorry...',
             text: 'Movie not found',
           });
         } else {
-          props.postMovie(data);
+          props.save('movies', { title, year, length, rating, poster, plot });
         }
       })
       .catch(console.log);

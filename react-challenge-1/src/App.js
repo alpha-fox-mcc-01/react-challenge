@@ -1,44 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import MovieList from './components/MovieList';
 import AddMovie from './components/AddMovie';
+import useRequest from './hooks/useRequest';
 
 export default function App() {
-  const [movies, setMovies] = useState([]);
+  // const [movies, setMovies] = useState([]);
+  const {
+    data: movies,
+    loading,
+    error,
+    handlePost,
+    handleDelete
+  } = useRequest('movies');
 
-  useEffect(() => {
-    axios
-      .get('http://localhost:3000/movies?_sort=id&_order=desc')
-      .then(({ data }) => {
-        setMovies(data);
-      })
-      .catch(console.log);
-  }, []);
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error...</p>
+  
 
-  const postMovie = (movie) => {
-    axios
-    .post('http://localhost:3000/movies', {
-      title: movie.title,
-      year: movie.year,
-      length: movie.length,
-      rating: movie.rating,
-      poster: movie.poster,
-      plot: movie.plot,
-    })
-      .then(({ data }) => {
-        setMovies([data, ...movies]);
-      })
-      .catch(console.log);
-  }
+  // useEffect(() => {
+  //   axios
+  //     .get('http://localhost:3000/movies?_sort=id&_order=desc')
+  //     .then(({ data }) => {
+  //       setMovies(data);
+  //     })
+  //     .catch(console.log);
+  // }, []);
 
-  const deleteMovie = (id) => {
-    axios
-      .delete('http://localhost:3000/movies/' + id)
-      .then(function({ data }) {
-        const newMovies = movies.filter((movie) => movie.id !== id);
-        setMovies(newMovies);
-      });
-  };
+  // const deleteMovie = (id) => {
+  //   axios
+  //     .delete('http://localhost:3000/movies/' + id)
+  //     .then(function({ data }) {
+  //       const newMovies = movies.filter((movie) => movie.id !== id);
+  //       setMovies(newMovies);
+  //     })
+  //     .catch(console.log);
+  // };
 
   return (
     <>
@@ -47,7 +43,7 @@ export default function App() {
           <div className="container">
             <h1 className="text-white">Welcome to IndoXXI 2.0</h1>
             <AddMovie
-              postMovie={ postMovie }
+              save={ handlePost }
             />
           </div>
         </div>
@@ -56,7 +52,7 @@ export default function App() {
         <div className="row">
           <MovieList
             movies={ movies }
-            deleteMovie={ deleteMovie }
+            delete={ handleDelete }
           />
         </div>
       </main>

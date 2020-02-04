@@ -40,6 +40,7 @@ code {
   transition: top 2s ease 0s;
   -webkit-transition: top 2s ease 0s;
   overflow-y: hidden;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, .5);
 }
 
 .movie-card-image {

@@ -12,7 +12,7 @@ export default function MovieCard(props) {
   const { id, title, year, length, rating, poster, plot } = props.movie;
   return (
     <div className="col-md-6 col-lg-4 mb-4 justify-content-center">
-      <div className="movie-card h-100 shadow rounded">
+      <div className="movie-card rounded">
         <img className="movie-card-image" src={ poster } alt="Movie Poster"/>
         <div className="movie-card-description">
           <h4 className="card-title"><strong>{ title }</strong></h4>
@@ -22,7 +22,7 @@ export default function MovieCard(props) {
           <h5 className="card-text">Rating: { getStyle(rating) }</h5>
           <button
             className="btn-sm btn-danger btn-del mt-3"
-            onClick={() => props.deleteMovie(id) }
+            onClick={() => props.delete('movies', id) }
           >Delete</button>
         </div>
       </div>

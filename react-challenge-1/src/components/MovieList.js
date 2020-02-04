@@ -7,7 +7,7 @@ export default function MovieList(props) {
       <MovieCard
         key={ movie.id }
         movie={ movie }
-        deleteMovie={ props.deleteMovie }
+        delete={ props.delete }
       />
     );
   });

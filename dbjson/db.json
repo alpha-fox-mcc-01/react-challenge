@@ -1,15 +1,6 @@
 {
   "movies": [
     {
-      "title": "Fantastic Beasts and Where to Find Them ",
-      "year": "2016",
-      "length": "2h 12min",
-      "rating": "7.3",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjMxOTM1OTI4MV5BMl5BanBnXkFtZTgwODE5OTYxMDI@.jpg",
-      "plot": "The adventures of writer Newt Scamander in New York's secret community of witches and wizards seventy years before Harry Potter reads his book in school.",
-      "id": 1
-    },
-    {
       "title": "The Irishman ",
       "year": "2019",
       "length": "3h 29min",
@@ -53,6 +44,42 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@.jpg",
       "plot": "An ex-hit-man comes out of retirement to track down the gangsters that killed his dog and took everything from him.",
       "id": 7
+    },
+    {
+      "title": "Harry Potter and the Sorcerer's Stone ",
+      "year": "2001",
+      "length": "2h 32min",
+      "rating": "7.6",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@.jpg",
+      "plot": "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.",
+      "id": 8
+    },
+    {
+      "title": "Titanic ",
+      "year": "1997",
+      "length": "3h 14min",
+      "rating": "7.8",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@.jpg",
+      "plot": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+      "id": 9
+    },
+    {
+      "title": "Jack Reacher ",
+      "year": "2012",
+      "length": "2h 10min",
+      "rating": "7.0",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTM1NjUxMDI3OV5BMl5BanBnXkFtZTcwNjg1ODM3OA@@.jpg",
+      "plot": "A homicide investigator digs deeper into a case involving a trained military sniper who shot five random victims.",
+      "id": 10
+    },
+    {
+      "title": "Mission: Impossible - Fallout ",
+      "year": "2018",
+      "length": "2h 27min",
+      "rating": "7.8",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjRlZmM0ODktY2RjNS00ZDdjLWJhZGYtNDljNWZkMGM5MTg0XkEyXkFqcGdeQXVyNjAwMjI5MDk@.jpg",
+      "plot": "Ethan Hunt and his IMF team, along with some familiar allies, race against time after a mission gone wrong.",
+      "id": 12
     }
   ]
 }
