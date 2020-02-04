@@ -11,7 +11,8 @@ export function FilmDetails(props) {
      paddingLeft : '25px'
    }
    const titleStyles = {
-     fontSize: 'xx-large'
+     fontSize: 'xx-large',
+     backgroundImage: 'linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%)'
    }
 
    const imageStyle = {

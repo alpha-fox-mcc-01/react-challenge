@@ -25,6 +25,14 @@ function App() {
   const styles = {
     fontSize: 'x-large'
   }
+  const logoStyle = {
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+  const imageStyle = {
+    width: '350px',
+    height: '100%'
+  }
   
   if (loading) return <p>Loading....</p>
   if (error) return <p>Oops... An Error Occured</p>
@@ -33,7 +41,9 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path='/'>
-            <h1 style={styles}>Welcome to List of Ghibli Films</h1>
+            <div style={logoStyle} className="flex flex-wrap">
+            <img style={imageStyle} src="https://www.pngkey.com/png/full/133-1338872_-hayao-miyazaki-princess-mononoke-ponyo-spirited-away.png" alt="logo" />
+            </div>
             <Searchbar searchByKeyword={searchByKeyword}></Searchbar> 
             {result.length > 0 ? <ListContainer films={result} /> :  <ListContainer films={data} />}
           </Route>
