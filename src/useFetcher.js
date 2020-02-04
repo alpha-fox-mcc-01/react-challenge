@@ -2,7 +2,7 @@ import instance from './helpers/axiosinstance'
 import React, { useEffect, useState } from 'react'
 
 
-function useFetcher(endpoint = '/films') {
+function useFetcher(endpoint) {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
