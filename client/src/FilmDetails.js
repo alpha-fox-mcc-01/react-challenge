@@ -3,6 +3,7 @@ import {  useParams } from "react-router-dom"
 import useFetcher from './useFetcher'
 import imageList from './helpers/images'
 import { white } from 'color-name'
+import FilmReview from './FilmReview'
 
 export function FilmDetails(props) {
   const { id } = useParams()
@@ -26,8 +27,8 @@ export function FilmDetails(props) {
      justifyContent: 'flex-start'
    }
    const tomatoStyle = {
-     width: '48px',
-     height: '48px',
+     width: '24px',
+     height: '24px',
      margin: '0 auto'
    }
    const container = {
@@ -60,7 +61,7 @@ export function FilmDetails(props) {
           <h1 style={titleStyles}>{data.title} ({data.release_date})</h1>
           <p style={fonts}>Directed by {data.director}</p><br/>
         </div>
-        <div  style={descContainer} className="w-1/3 rating">
+        <div style={descContainer} className="w-1/3 flex-wrap rating">
           <img style={tomatoStyle} src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/1009px-Rotten_Tomatoes.svg.png" alt="rottentomato" /> 
           <p style={rating}>{data.rt_score}%</p> 
           <p style={fonts}>Tomatometer</p>
@@ -81,6 +82,9 @@ export function FilmDetails(props) {
         <div style={descContainer}  className="w-full">
           <p>{data.description}</p>
         </div>
+      </div>
+      <div className="">
+        <FilmReview id={data.id}></FilmReview>
       </div>
     </div>
   )

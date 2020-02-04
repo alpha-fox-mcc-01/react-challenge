@@ -1,7 +1,8 @@
 const imageList = [
     {
         title: 'castle in the sky',
-        url: 'https://images-na.ssl-images-amazon.com/images/I/910Z5JbI6VL._SL1500_.jpg'
+        url: 'https://images-na.ssl-images-amazon.com/images/I/910Z5JbI6VL._SL1500_.jpg',
+        video: ''
     },
     {
         title: 'grave of the fireflies',
