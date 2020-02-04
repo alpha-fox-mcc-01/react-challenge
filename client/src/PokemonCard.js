@@ -4,10 +4,10 @@ export class PokemonCard extends Component {
     render() {
         const { pokemon } = this.props
         let cardStyle = {
-            width: '37rem',
+            width: '30rem',
             // marginLeft: 'auto',
-            marginRight: 'auto',
-            height: '45rem'
+            // marginRight: 'auto',
+            height: '44rem'
         }
         return (
             <div className="card" style={cardStyle}>

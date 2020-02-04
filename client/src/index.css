@@ -11,6 +11,7 @@ body {
     background-image: url("https://www.xmple.com/wallpaper/cyan-gradient-white-linear-1920x1080-c2-fffafa-6cd9fc-a-255-f-14.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    border: 0px !important;
 }
 
 .card-img-top {
@@ -27,7 +28,7 @@ code {
 }
 
 .recommendations {
-  height: 10.3rem;
+  height: 11.7rem;
   overflow-y: auto;
 }
 
@@ -53,4 +54,39 @@ code {
 
 .col-md-8 {
   padding: 0px 0px!important;
+}
+
+.col-md-6 {
+  position: relative;
+  top: -800px;
+  -webkit-animation: slide 1s forwards;
+  /* -webkit-animation-delay: 2s; */
+  animation: slide 1s forwards;
+  /* animation-delay: 2s; */
+}
+
+.recommendations {
+  position: relative;
+  right: -600px;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 1s;
+  animation: slide 1s forwards;
+  animation-delay: 1s;
+}
+
+@-webkit-keyframes slide {
+  100% { top: 0; right: 0;}
+}
+
+@keyframes slide {
+  100% { top: 0; right: 0;}
+}
+
+.col-md-6 {
+  overflow: hidden;
+}
+
+#no-pokemon {
+  margin-top: 7rem;
+  opacity: 0.5;
 }
