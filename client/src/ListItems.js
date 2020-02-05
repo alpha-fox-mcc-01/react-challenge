@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import imageList from './helpers/images'
+import imageList from './resources/images'
 import './listItemStyles.css'
 import { useHistory } from 'react-router-dom'
 

@@ -1,5 +1,5 @@
 // Imports
-import instance from '../../helpers/axiosinstance'
+import instance from '../../API/axiosinstance'
 
 
 // Constants

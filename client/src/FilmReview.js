@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './filmreviewstyle.css'
-import instanceServer from './helpers/axiosServer'
+import instanceServer from './API/axiosServer'
 import Swal from 'sweetalert2'
 export function FilmReview(props) {
   const [reviews, setReviews] = useState([])

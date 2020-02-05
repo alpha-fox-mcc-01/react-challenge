@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import {  useParams, Link } from "react-router-dom"
 import useFetcher from './useFetcher'
-import imageList from './helpers/images'
+import imageList from './resources/images'
 import FilmReview from './FilmReview'
 
 
 export function FilmDetails(props) {
   const { id } = useParams()
   const { loading, details, error } = useFetcher('/films/' + id)
+
    const upperStyles = {
      paddingLeft : '25px',
      backgroundColor: '#333'
@@ -83,7 +84,10 @@ export function FilmDetails(props) {
           }}) : '' }
         </div>
         <div style={descContainer} className="w-3/4">
-          <iframe className="w-full" width="477" height="268" src="https://www.youtube.com/embed/8ykEy-yPBFc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        { details.title ? imageList.map( image => {
+                if (image.title.toLowerCase() === details.title.toLowerCase()) {
+                  return <iframe key={image.title} className="w-full" width="477" height="268"  src={image.video} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          }}) : '' }
         </div>
       </div>
       <div>
