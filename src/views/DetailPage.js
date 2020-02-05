@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import useFetchOne from '../hooks/useFetchOne'
+// import useFetchOne from '../hooks/useFetchOne'
 
 import './DetailPage.css'
 
@@ -24,8 +24,8 @@ export default function DetailPage(props) {
     dispatch(requestDetail('anime', id))
   }, [])
 
-  const detail = useSelector((state) => state.fetchedDetail)
-  const isLoading = useSelector((state) => state.isLoading)
+  const detail = useSelector((state) => state.anime.fetchedDetail)
+  const isLoading = useSelector((state) => state.loading.isLoading)
 
   if (isLoading) {
     return (

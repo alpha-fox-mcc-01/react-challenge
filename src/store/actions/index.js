@@ -1,4 +1,4 @@
-import axiosInstance from '../../helpers/axios'
+import axiosInstance from '../../api/axios'
 // action types
 export const FETCH_DATA = 'FETCH_DATA'
 export const FETCH_DETAIL = 'FETCH_DETAIL'
@@ -40,13 +40,14 @@ export const recieveDetail = (detail) => {
 
 export const requestDetail = (dataType, id) => {
   return (dispatch) => {
+    dispatch(toggleLoading())
     axiosInstance({
       method: 'GET',
       url: `/${dataType}/${id}`,
     })
       .then(({ data }) => {
         console.log(data)
-        dispatch(toggleLoading())
+        dispatch(toggleLoading(false))
         dispatch(recieveDetail(data))
       })
       .catch((err) => {
@@ -55,8 +56,9 @@ export const requestDetail = (dataType, id) => {
   }
 }
 
-export const toggleLoading = () => {
+export const toggleLoading = (status = true) => {
   return {
     type: TOGGLE_LOADING,
+    payload: status,
   }
 }

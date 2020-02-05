@@ -7,7 +7,7 @@ export default function useFetchTop(type) {
   const dispatch = useDispatch()
   // const [fetchedData, setFetchedData] = useState([])
 
-  const fetchedData = useSelector((state) => state.fetchedData)
+  const fetchedData = useSelector((state) => state.anime.fetchedData)
 
   useEffect(() => {
     // console.log('fetchTopHook jalan, good job')
