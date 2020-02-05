@@ -40,7 +40,7 @@ export default function App(props) {
                         pokemon={ pokemon } 
                         />
                     </div>
-                    <div className='col-md-6 pokemon-card'>
+                    <div className='col-md-6 pokemon-card might-like'>
                         <h2>Recommendations</h2><br />
                         <p>Explore more and broaden your knowledge!</p><hr />
                         <h3>You might like: '{ pokemon.types[0].type.name}' type pokemons</h3><br />

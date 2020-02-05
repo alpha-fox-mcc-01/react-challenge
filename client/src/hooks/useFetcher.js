@@ -1,57 +1,40 @@
 import { useState } from 'react'
-import axios from 'axios'
+import { getPokemonDetail, getRecommendations } from '../store/actions/'
+import { useSelector, useDispatch } from 'react-redux'
+
 export default function useFetcher() {
-    const [typePokemons, setTypePokemons] = useState([])
-    const [abilityPokemons, setAbilityPokemons] = useState([])
+    const dispatch = useDispatch();
+    // const [typePokemons, setTypePokemons] = useState([])
+    // const [abilityPokemons, setAbilityPokemons] = useState([])
+    const typePokemons = useSelector((state) => state.typePokemons)
+    const abilityPokemons = useSelector((state) => state.abilityPokemons)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
-    const [pokemon, setPokemon] = useState({})
+    // const [pokemon, setPokemon] = useState({})
+    const pokemonLoading = useSelector(state => state.pokemonLoading)
+    const pokemonError = useSelector(state => state.pokemonError)
+    const pokemon = useSelector(state => state.pokemon)
+    const comparePokemon = useSelector(state => state.comparePokemon)
 
     const fetchRecommendations = (pokemon) => {
-        // fetch recommendations here
-        setLoading(true)
-        axios({
-            method: 'GET',
-            url: pokemon.types[0].type.url
-        })
-            .then(({ data }) => {
-                setTypePokemons(data.pokemon)
-                return axios({
-                    method: 'GET',
-                    url: pokemon.abilities[0].ability.url
-                })
-            })
-            .then(({ data }) => {
-                setLoading(false)
-                setAbilityPokemons(data.pokemon)
-            })
-            .catch(({ response: {data}}) => {
-                setLoading(false)
-                setError(data)
-            })
+        dispatch(getRecommendations(pokemon))
     }
 
     const fetchPokemonDetail = (keyword) => {
-        setLoading(true)
-        axios({
-            method: 'GET',  
-            url: 'https://pokeapi.co/api/v2/pokemon/' + keyword.toLowerCase()
-        })
-            .then(({ data }) => {
-                setLoading(false)
-                setPokemon(data)
-            })
-            .catch(({ response: {data}}) => {
-                setLoading(false)
-                setError(data)
-            })
+        dispatch(getPokemonDetail(keyword, 'main'))
+    }
+
+    const fetchComparePokemonDetail = (keyword) => {
+        dispatch(getPokemonDetail(keyword, ''))
     }
 
     return {
         pokemon,
+        comparePokemon,
         typePokemons,
         abilityPokemons,
         fetchPokemonDetail,
+        fetchComparePokemonDetail,
         fetchRecommendations,
         loading,
         error

@@ -27,11 +27,6 @@ code {
   width: 100%;
 }
 
-.recommendations {
-  height: 11.7rem;
-  overflow-y: auto;
-}
-
 .recommendations::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -65,9 +60,9 @@ code {
   /* animation-delay: 2s; */
 }
 
-.pokemon-detail {
+.pokemon-detail .basic-info {
   position: relative;
-  top: 500px;
+  top: 400px;
   -webkit-animation: slide 2s forwards;
   /* -webkit-animation-delay: 2s; */
   animation: slide 2s forwards;
@@ -75,6 +70,8 @@ code {
 }
 
 .recommendations {
+  height: 11.7rem;
+  overflow-y: auto;
   position: relative;
   right: -600px;
   -webkit-animation: slide 1s forwards;
@@ -132,9 +129,10 @@ code {
   opacity: 0.3;
 }
 
-#compare-container {
+#compare-container-search {
   margin-top: auto;
   margin-bottom: auto;
+  width: 100%
 }
 
 /* The heart of the matter */
@@ -154,5 +152,29 @@ code {
 
 #web-title {
   cursor: pointer;
-  color: black;
+  color: grey;
+}
+
+
+.pokemon-compare-card, #compare-container-search, .pokemon-detail {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1.1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.might-like {
+  /* background-image: url("https://www.xmple.com/wallpaper/linear-green-white-gradient-1920x1080-c2-90ee90-fffaf0-a-30-f-14.svg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
 }

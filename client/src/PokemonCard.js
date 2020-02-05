@@ -11,8 +11,6 @@ export default function PokemonCard(props) {
     const { pokemon } = props
     let cardStyle = {
         width: '30rem',
-        // marginLeft: 'auto',
-        // marginRight: 'auto',
         height: '44rem'
     }
     return (
