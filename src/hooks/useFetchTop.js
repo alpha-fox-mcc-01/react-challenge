@@ -1,18 +1,17 @@
 import { useState, useEffect } from 'react'
-import Axios from 'axios'
+
+import { useDispatch, useSelector } from 'react-redux'
+import { requestData } from '../store/actions'
 
 export default function useFetchTop(type) {
-  const [fetchedData, setFetchedData] = useState([])
+  const dispatch = useDispatch()
+  // const [fetchedData, setFetchedData] = useState([])
+
+  const fetchedData = useSelector((state) => state.fetchedData)
 
   useEffect(() => {
-    Axios({
-      method: 'GET',
-      url: `https://api.jikan.moe/v3/top/${type}/1`
-    })
-      .then(({ data }) => {
-        setFetchedData(data.top)
-      })
-      .catch(console.log)
+    // console.log('fetchTopHook jalan, good job')
+    dispatch(requestData(type))
   }, [type])
 
   return fetchedData
