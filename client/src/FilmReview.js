@@ -80,7 +80,7 @@ export function FilmReview(props) {
             <label class="block text-gray-700 text-sm font-bold mb-2" for="review">
               Review
             </label>
-            <input value={ newReview }  onChange= { handleChangeReview }  type="text" placeholder="type in your review..."/>
+            <textarea value={ newReview }  onChange= { handleChangeReview }  class="resize-y border rounded focus:outline-none focus:shadow-outline"></textarea> 
             <div>
               <button type="submit">Submit</button>
             </div>
