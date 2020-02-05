@@ -1,0 +1,23 @@
+.img-wrapper {
+  position: relative;
+}
+
+.cover-image {
+  object-fit: cover;
+  width: 336px;
+  height: 504px;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.8em;
+  width: 100%;
+  min-height: 30%;
+}
+
+.title {
+
+}
