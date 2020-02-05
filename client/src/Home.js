@@ -8,27 +8,28 @@ import useFetcher from './hooks/useFetcher'
 import Recommendations from './Recommendations'
 export default function App(props) {
     const [showDetail, setShowDetail] = useState(true)
-    const { loading, error, pokemon, typePokemons, abilityPokemons, fetchPokemonDetail, fetchRecommendations } = useFetcher();
+    const { loadingPokemon, errorPokemon, pokemon, typePokemons, abilityPokemons, fetchPokemonDetail, fetchRecommendations } = useFetcher();
 
     useEffect(() => {
-        if (error) {
+        if (errorPokemon) {
             Swal.fire('Error', 'Sorry, unable to find pokemon with that name', 'error')
         }
-    }, [error])
+    }, [errorPokemon])
+
 
     useEffect(() => {
         if (pokemon.id) {
             fetchRecommendations(pokemon);
             setShowDetail(true)
         }
-    }, [pokemon])
+    }, [fetchRecommendations, pokemon])
 
     const getPokemon = (name) => {
         setShowDetail(false)
         fetchPokemonDetail(name)
     }
 
-    if (loading) return <Spinner name='double-bounce'/> 
+    if (loadingPokemon) return <Spinner name='double-bounce'/> 
     return (
         <>
             <SearchBar getPokemon={ getPokemon }/><hr />
@@ -41,14 +42,14 @@ export default function App(props) {
                         />
                     </div>
                     <div className='col-md-6 pokemon-card might-like'>
-                        <h2>Recommendations</h2><br />
-                        <p>Explore more and broaden your knowledge!</p><hr />
-                        <h3>You might like: '{ pokemon.types[0].type.name}' type pokemons</h3><br />
+                        <h1><strong>Recommendations</strong></h1><br />
+                        <p><u>Explore more and broaden your knowledge!</u></p><hr />
+                        <h3>You might like: <strong><i>{ pokemon.types[0].type.name}</i></strong> type pokemons</h3><br />
                             <Recommendations 
                             pokemons={ typePokemons }
                             />
                         <hr />
-                        <h3>You might also like: Pokemons with '{ pokemon.abilities[0].ability.name}' ability</h3><br />
+                        <h3>You might also like: Pokemons with <strong><i>{ pokemon.abilities[0].ability.name}</i></strong> ability</h3><br />
                             <Recommendations 
                             pokemons={ abilityPokemons } 
                             />

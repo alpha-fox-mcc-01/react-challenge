@@ -6,7 +6,7 @@ const initialState = {
     abilityPokemons: [],
     typePokemons: [],
     loadingPokemon: false,
-    errorPokemon: false
+    errorPokemon: null
 }
 
 function pokemonReducer(state = initialState, action) {
@@ -20,7 +20,7 @@ function pokemonReducer(state = initialState, action) {
         case SET_LOADING_POKEMON:
             return {...state, loadingPokemon: action.isLoading}
         case SET_ERROR_POKEMON:
-            return {...state, errorPokemon: action.isError}
+            return {...state, errorPokemon: action.error}
         default: 
             return state
     }

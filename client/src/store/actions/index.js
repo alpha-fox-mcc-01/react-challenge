@@ -9,18 +9,24 @@ export const SET_ERROR_POKEMON = 'SET_ERROR_POKEMON'
 // action creators
 export const getPokemonDetail = (keyword, pokemonType) => {
     return dispatch => {
+        // dispatch(setLoadingPokemon(true))
         axios({
             method: 'GET',
             url: 'https://pokeapi.co/api/v2/pokemon/' + keyword.toLowerCase()
         })
             .then(({ data }) => {
                 if (pokemonType === 'main') {
+                    // console.log('masuk')
+                    // dispatch(setLoadingPokemon(false))
                     dispatch(receivePokemonDetail(data))
                 } else {
                     dispatch(receiveComparePokemonDetail(data))
                 }
             })
-            .catch(console.log)
+            .catch(({ response: { data }}) => {
+                // dispatch(setLoadingPokemon(false))
+                // dispatch(setErrorPokemon(data))
+            })
     }
 }
 
@@ -28,6 +34,7 @@ export const getRecommendations = (pokemon) => {
     let ability = []
     let type = []
     return dispatch => {
+        // dispatch(setLoadingPokemon(true))
         axios({
             method: 'GET',
             url: pokemon.types[0].type.url
@@ -41,10 +48,12 @@ export const getRecommendations = (pokemon) => {
             })
             .then(({ data }) => {
                 ability = data.pokemon
+                // dispatch(setLoadingPokemon(false))
                 dispatch(receiveRecommendations({type, ability}))
             })
             .catch(({ response: { data }}) => {
-                console.log(data)
+                // dispatch(setLoadingPokemon(false))
+                // dispatch(setErrorPokemon(data))
             })
     }
 }
@@ -77,9 +86,9 @@ export const setLoadingPokemon = (isLoading) => {
     }
 }
 
-export const setErrorPokemon = (isError) => {
+export const setErrorPokemon = (error) => {
     return {
         type: SET_ERROR_POKEMON,
-        isError
+        error
     }
 }

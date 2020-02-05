@@ -44,7 +44,7 @@ export default function PokemonDetail(props) {
 
     useEffect(() => {
         fetchPokemonDetail(name)
-    }, [fetchPokemonDetail])
+    }, [fetchPokemonDetail, name])
 
     let cardStyleDetail = {
         width: '100%',
