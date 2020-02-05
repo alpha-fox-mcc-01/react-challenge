@@ -1,0 +1,157 @@
+body {
+  background-image: url("https://wallpaperplay.com/walls/full/e/f/e/83279.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Quicksand', sans-serif;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+.card {
+    background-image: url("https://www.xmple.com/wallpaper/cyan-gradient-white-linear-1920x1080-c2-fffafa-6cd9fc-a-255-f-14.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0px !important;
+}
+
+.card-img-top {
+  width: 100% !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#search-btn {
+  width: 100%;
+}
+
+.recommendations {
+  height: 11.7rem;
+  overflow-y: auto;
+}
+
+.recommendations::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.recommendations::-webkit-scrollbar
+{
+    width: 3px;
+    background-color: #F5F5F5;
+}
+
+.recommendations::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgb(0, 200, 255);
+}
+
+.col-md-8 {
+  padding: 0px 0px!important;
+}
+
+.pokemon-card {
+  position: relative;
+  top: -800px;
+  -webkit-animation: slide 1s forwards;
+  /* -webkit-animation-delay: 2s; */
+  animation: slide 1s forwards;
+  /* animation-delay: 2s; */
+}
+
+.pokemon-detail {
+  position: relative;
+  top: 500px;
+  -webkit-animation: slide 2s forwards;
+  /* -webkit-animation-delay: 2s; */
+  animation: slide 2s forwards;
+  /* animation-delay: 2s; */
+}
+
+.recommendations {
+  position: relative;
+  right: -600px;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 1s;
+  animation: slide 1s forwards;
+  animation-delay: 1s;
+}
+
+@-webkit-keyframes slide {
+  100% { top: 0; right: 0; bottom: 0;}
+}
+
+@keyframes slide {
+  100% { top: 0; right: 0; bottom: 0;}
+}
+
+.pokemon-card {
+  overflow: hidden;
+}
+
+#no-pokemon {
+  margin-top: 7rem;
+  opacity: 0.5;
+}
+
+.view-detail {
+  border-radius: 10px;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.text {
+  border-radius: 10px;
+  background-color: rgb(54, 146, 168);
+  color: white;
+  font-size: 16px;
+  padding: 8px 8px;
+}
+
+#pokemon-container:hover .card {
+  transition: .5s ease;
+}
+
+#pokemon-container:hover .view-detail {
+  opacity: 1;
+}
+
+#pokemon-container:hover .card {
+  opacity: 0.3;
+}
+
+#compare-container {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* The heart of the matter */
+/* .moveset > .row {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.moveset > .row > .col-xs-4 {
+  display: inline-block;
+  float: none;
+} */
+
+.moveset .row h5 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#web-title {
+  cursor: pointer;
+}
