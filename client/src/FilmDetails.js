@@ -82,7 +82,7 @@ export function FilmDetails(props) {
           <p>{data.description}</p>
         </div>
       </div>
-      <div className="">
+      <div className="py-6">
         <FilmReview id={data.id}></FilmReview>
       </div>
     </div>
