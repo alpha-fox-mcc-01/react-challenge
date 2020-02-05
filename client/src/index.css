@@ -56,12 +56,21 @@ code {
   padding: 0px 0px!important;
 }
 
-.col-md-6 {
+.pokemon-card {
   position: relative;
   top: -800px;
   -webkit-animation: slide 1s forwards;
   /* -webkit-animation-delay: 2s; */
   animation: slide 1s forwards;
+  /* animation-delay: 2s; */
+}
+
+.pokemon-detail {
+  position: relative;
+  top: 500px;
+  -webkit-animation: slide 2s forwards;
+  /* -webkit-animation-delay: 2s; */
+  animation: slide 2s forwards;
   /* animation-delay: 2s; */
 }
 
@@ -75,18 +84,74 @@ code {
 }
 
 @-webkit-keyframes slide {
-  100% { top: 0; right: 0;}
+  100% { top: 0; right: 0; bottom: 0;}
 }
 
 @keyframes slide {
-  100% { top: 0; right: 0;}
+  100% { top: 0; right: 0; bottom: 0;}
 }
 
-.col-md-6 {
+.pokemon-card {
   overflow: hidden;
 }
 
 #no-pokemon {
   margin-top: 7rem;
   opacity: 0.5;
+}
+
+.view-detail {
+  border-radius: 10px;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.text {
+  border-radius: 10px;
+  background-color: rgb(54, 146, 168);
+  color: white;
+  font-size: 16px;
+  padding: 8px 8px;
+}
+
+#pokemon-container:hover .card {
+  transition: .5s ease;
+}
+
+#pokemon-container:hover .view-detail {
+  opacity: 1;
+}
+
+#pokemon-container:hover .card {
+  opacity: 0.3;
+}
+
+#compare-container {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* The heart of the matter */
+/* .moveset > .row {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.moveset > .row > .col-xs-4 {
+  display: inline-block;
+  float: none;
+} */
+
+.moveset .row h5 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#web-title {
+  cursor: pointer;
 }
