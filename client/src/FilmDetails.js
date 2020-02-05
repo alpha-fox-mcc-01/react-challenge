@@ -8,7 +8,6 @@ import FilmReview from './FilmReview'
 export function FilmDetails(props) {
   const { id } = useParams()
   const [loading, data, error] = useFetcher('/films/' + id)
-  console.log(imageList, 'ini imagelist')
    const upperStyles = {
      paddingLeft : '25px',
      backgroundColor: '#333'
