@@ -3,7 +3,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    useHistory
+    useHistory,
+    Link
 } from 'react-router-dom'
 import PokemonDetail from './PokemonDetail'
 import Home from './Home'
@@ -11,7 +12,7 @@ export default function App(props) {
     return (
         <Router>
             <div className='container'>
-                <center><h1 id='web-title'>P O K E - X P L O R E</h1></center>
+                <center><Link id='web-title' to="/"><h1>P O K E - X P L O R E</h1></Link></center>
                 <Switch>
                     <Route exact path='/'>
                         <Home />
