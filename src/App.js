@@ -1,15 +1,9 @@
-import React from 'react'
-import {
-  Link,
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom'
+import React from "react";
+import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import DetailPage from './views/DetailPage'
+import DetailPage from "./views/DetailPage";
 
-import CardList from './components/CardList'
-
+import CardList from "./components/CardList";
 
 export default function App() {
   return (
@@ -17,10 +11,20 @@ export default function App() {
       <div className="container mt-5 justify-content-center d-flex flex-column">
         <h3 className="text-center">Top 50</h3>
 
-        <div className="btn-group btn-group-lg" role="group" aria-label="Large button group">
-          <Link className="btn btn-outline-info" to="/">Anime</Link>
-          <Link className="btn btn-outline-info" to="/manga">Manga</Link>
-          <Link className="btn btn-outline-info" to="/characters">Character</Link>
+        <div
+          className="btn-group btn-group-lg"
+          role="group"
+          aria-label="Large button group"
+        >
+          <Link className="btn btn-outline-info" to="/">
+            Anime
+          </Link>
+          <Link className="btn btn-outline-info" to="/manga">
+            Manga
+          </Link>
+          <Link className="btn btn-outline-info" to="/characters">
+            Character
+          </Link>
         </div>
 
         <Switch>
@@ -39,5 +43,5 @@ export default function App() {
         </Switch>
       </div>
     </Router>
-  )
+  );
 }
