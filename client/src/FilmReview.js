@@ -8,14 +8,9 @@ export function FilmReview(props) {
   const [newReview, setNewReview] = useState('')
   const [newUser, setNewUser] = useState('')
 
-  const handleSubmit = (event) => {
-    console.log('onsubmit kepanggil', '<><>><<><><.')
-    event.preventDefault()
-    postReview()
-  }
 
-  const postReview = () => {
-    console.log('postReview kepanggil', props.id, newReview, newUser)
+  const postReview = (event) => {
+    event.preventDefault()
     instanceServer.post('/reviews', {
       filmId: props.id,
       review: newReview,
@@ -27,18 +22,16 @@ export function FilmReview(props) {
                     Swal.fire('Yay!', 'Your review is successfully posted!', 'success')
                   })
                   .catch(err => {
-                    // Swal.fire('Oops..', 'An error occured', 'error')
+                    Swal.fire('Oops..', 'An error occured', 'error')
                   })
   }
 
   const handleChangeUser = (event) => {
-    console.log('handle change user kepanggil')
     setNewUser(event.target.value)
     
   }
 
   const handleChangeReview = (event) => {
-    console.log('handle change review kepanggil')
     setNewReview(event.target.value)
   }
 
@@ -71,13 +64,13 @@ export function FilmReview(props) {
       <div className="w-1/2 max-w-xs">
         <form className="shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={ postReview }>
           <div className="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+          <label class="block text-gray-700 text-sm font-bold mb-2">
             Username
           </label>
           <input value={ newUser } onChange= { handleChangeUser } type="text" placeholder="your name..." />
           </div>
           <div className="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="review">
+            <label class="block text-gray-700 text-sm font-bold mb-2">
               Review
             </label>
             <textarea value={ newReview }  onChange= { handleChangeReview }  class="resize-y border rounded focus:outline-none focus:shadow-outline"></textarea> 

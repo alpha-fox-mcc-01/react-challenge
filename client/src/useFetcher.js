@@ -1,26 +1,21 @@
-import instance from './helpers/axiosinstance'
-import React, { useEffect, useState } from 'react'
 
-
+import React, { useEffect } from 'react'
+import { fetchFilms } from './store/actions'
+import { useSelector, useDispatch } from 'react-redux'
 function useFetcher(endpoint) {
-  const [data, setData] = useState([])
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-
+  const data = useSelector(state => state.films)
+  const loading = useSelector(state => state.loading)
+  const error = useSelector(state => state.error)
+  const details = useSelector(state => state.details)
+  const dispatch = useDispatch()
   useEffect(() => {
-    setLoading(true)
-    instance.get(`${endpoint}`)
-      .then(({ data }) => {
-        setLoading(false)
-        setData(data)
-      })
-      .catch(err => {
-        setError(err.response.data)
-      })
-      
+      dispatch(fetchFilms(endpoint))
   }, [endpoint])
 
-  return [loading, data, error]
+
+  return {
+    loading, data, details, error
+  }
 }
 
 export default useFetcher

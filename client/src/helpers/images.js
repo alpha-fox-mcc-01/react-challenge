@@ -2,11 +2,12 @@ const imageList = [
     {
         title: 'castle in the sky',
         url: 'https://images-na.ssl-images-amazon.com/images/I/910Z5JbI6VL._SL1500_.jpg',
-        video: ''
+        video: '<iframe className="w-full" width="477" height="268" src="https://www.youtube.com/embed/8ykEy-yPBFc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     },
     {
         title: 'grave of the fireflies',
-        url: 'https://m.media-amazon.com/images/M/MV5BZmY2NjUzNDQtNTgxNC00M2Q4LTljOWQtMjNjNDBjNWUxNmJlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg'
+        url: 'https://m.media-amazon.com/images/M/MV5BZmY2NjUzNDQtNTgxNC00M2Q4LTljOWQtMjNjNDBjNWUxNmJlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg',
+        video: '<iframe className="w-full" width="477" height="268"  src="https://www.youtube.com/embed/4vPeTSRd580" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     },
     {
         title: 'my neighbor totoro',

@@ -22,7 +22,7 @@ export function ListItems(props) {
     }
     return (
       <div id="film-card" className="max-w-xs rounded shadow-lg my-2" style={styles}>
-        <div class="img-container">        
+        <div className="img-container">        
           {images.map( image => {
             if (image.title.toLowerCase() === props.film.title.toLowerCase()) {
               return <img src={image.url} alt='filmposter' key={image} />
