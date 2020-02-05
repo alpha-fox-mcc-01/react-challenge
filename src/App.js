@@ -1,51 +1,43 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
+import {
+  Link,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom'
 
-import './App.css'
+import DetailPage from './views/DetailPage'
 
-import AnimeCard from './AnimeCard'
-import SearchBar from './SearchBar'
+import CardList from './components/CardList'
 
-export default function TopAnimeList() {
-  const [animes, setAnimes] = useState([])
-  const [searchResult, setSearchResult] = useState([])
-  const [activeKeyword, setActiveKeyword] = useState('')
 
-  // componentDidMount, jgn lupa tambahin empty array di parameter kedua
-  useEffect(() => {
-    axios({
-      method: 'GET',
-      url: 'https://api.jikan.moe/v3/top/anime/1'
-    })
-      .then(({ data }) => {
-        setAnimes(data.top)
-      })
-      .catch(console.log)
-  }, [])
-
-  const searchAnime = (keyword) => {
-    setActiveKeyword(keyword)
-    const result = animes.filter(anime => {
-      const title = anime.title.toLowerCase()
-      return title.includes(keyword.toLowerCase())
-    })
-    setSearchResult(result)
-  }
-
-  let animeList = []
-  if (activeKeyword.length === 0) {
-    animeList = animes
-  } else {
-    animeList = searchResult
-  }
-
+export default function App() {
   return (
-    <div className="container mt-5">
-      <h3 className="text-center">Top Anime List</h3>
-      <SearchBar searchAnime={searchAnime} />
-      <div className="d-flex flex-wrap">
-        {animeList.map(anime => <AnimeCard anime={anime} key={anime.mal_id} />)}
+    <Router>
+      <div className="container mt-5 justify-content-center d-flex flex-column">
+        <h3 className="text-center">Top 50</h3>
+
+        <div className="btn-group btn-group-lg" role="group" aria-label="Large button group">
+          <Link className="btn btn-outline-info" to="/">Anime</Link>
+          <Link className="btn btn-outline-info" to="/manga">Manga</Link>
+          <Link className="btn btn-outline-info" to="/characters">Character</Link>
+        </div>
+
+        <Switch>
+          <Route exact path="/">
+            <CardList type="anime" />
+          </Route>
+          <Route exact path="/manga">
+            <CardList type="manga" />
+          </Route>
+          <Route exact path="/characters">
+            <CardList type="characters" />
+          </Route>
+          <Route exact path="/:id">
+            <DetailPage />
+          </Route>
+        </Switch>
       </div>
-    </div>
+    </Router>
   )
 }

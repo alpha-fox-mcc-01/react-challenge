@@ -8,7 +8,7 @@ export default function SearchBar(props) {
   }
 
   return (
-    <div className="card">
+    <div className="card my-3">
       <div className="card-body">
         <form>
           <div className="form-row">
