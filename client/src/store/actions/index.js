@@ -30,7 +30,8 @@ export const getPokemonDetail = (keyword, pokemonType) => {
 export const getRecommendations = (pokemon) => {
     let ability = []
     let type = []
-    return dispatch => {
+    return dispatch => {  
+        dispatch(setLoadingPokemon())
         axios({
             method: 'GET',
             url: pokemon.types[0].type.url

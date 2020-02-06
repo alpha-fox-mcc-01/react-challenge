@@ -16,11 +16,11 @@ function pokemonReducer(state = initialState, action) {
         case RECEIVE_RECOMMENDATION_POKEMONS:
             return {...state, loadingPokemon: false, abilityPokemons: action.recommendationPokemons.ability, typePokemons:action.recommendationPokemons.type}
         case RECEIVE_COMPARE_POKEMON: 
-            return {...state, comparePokemon: action.data}
+            return {...state, loadingPokemon: false, comparePokemon: action.data}
         case SET_LOADING_POKEMON:
             return {...state, loadingPokemon: !state.loadingPokemon}
         case SET_ERROR_POKEMON:
-            return {...state, errorPokemon: action.error}
+            return {...state, loadingPokemon: false, errorPokemon: action.error}
         default: 
             return state
     }

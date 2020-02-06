@@ -178,3 +178,10 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.loader {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}

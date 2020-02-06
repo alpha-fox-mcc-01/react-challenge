@@ -33,14 +33,14 @@ export default function App(props) {
       fetchRecommendations(pokemon);
       setShowDetail(true);
     }
-  }, [fetchRecommendations, pokemon]);
+  }, [pokemon]);
 
   const getPokemon = name => {
     setShowDetail(false);
     fetchPokemonDetail(name);
   };
 
-  if (loadingPokemon) return <Spinner name="double-bounce" />;
+  if (loadingPokemon) return <Spinner className='loader' name="double-bounce" />;
   return (
     <>
       <SearchBar getPokemon={getPokemon} />
