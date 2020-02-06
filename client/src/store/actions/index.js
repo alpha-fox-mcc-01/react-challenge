@@ -22,7 +22,7 @@ export const getPokemonDetail = (keyword, pokemonType) => {
                 }
             })
             .catch(({ response: { data }}) => {
-                // dispatch(setErrorPokemon(data))
+                dispatch(setErrorPokemon(data))
             })
     }
 }
@@ -31,7 +31,6 @@ export const getRecommendations = (pokemon) => {
     let ability = []
     let type = []
     return dispatch => {
-        // dispatch(setLoadingPokemon())
         axios({
             method: 'GET',
             url: pokemon.types[0].type.url
@@ -48,7 +47,7 @@ export const getRecommendations = (pokemon) => {
                 dispatch(receiveRecommendations({type, ability}))
             })
             .catch(({ response: { data }}) => {
-                // dispatch(setErrorPokemon(data))
+                dispatch(setErrorPokemon(data))
             })
     }
 }
