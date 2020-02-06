@@ -12,7 +12,7 @@ export default function useFetchTop(type) {
   useEffect(() => {
     // console.log('fetchTopHook jalan, good job')
     dispatch(requestData(type))
-  }, [type])
+  }, [type, dispatch])
 
   return fetchedData
 }
