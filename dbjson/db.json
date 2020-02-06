@@ -1,0 +1,34 @@
+{
+  "movies": [
+    {
+      "id": "tt6146586",
+      "title": "John Wick: Chapter 3 - Parabellum ",
+      "year": "2019",
+      "length": "2h 11min",
+      "rating": "7.5",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@.jpg",
+      "plot": "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.",
+      "createdAt": "2020-02-05T10:02:16.531Z"
+    },
+    {
+      "id": "tt4425200",
+      "title": "John Wick: Chapter 2 ",
+      "year": "2017",
+      "length": "2h 2min",
+      "rating": "7.5",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@.jpg",
+      "plot": "After returning to the criminal underworld to repay a debt, John Wick discovers that a large bounty has been put on his life.",
+      "createdAt": "2020-02-05T10:03:36.887Z"
+    },
+    {
+      "id": "tt2911666",
+      "title": "John Wick ",
+      "year": "2014",
+      "length": "1h 41min",
+      "rating": "7.4",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@.jpg",
+      "plot": "An ex-hit-man comes out of retirement to track down the gangsters that killed his dog and took everything from him.",
+      "createdAt": "2020-02-05T10:03:49.942Z"
+    }
+  ]
+}

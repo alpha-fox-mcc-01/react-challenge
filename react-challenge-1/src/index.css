@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif,
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.jumbotron-fluid {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("https://i.pinimg.com/originals/e5/03/dd/e503dd031fe1aafd9d42edc878c746d1.jpg");
+  background-size: cover;
+  height: 60vh;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addMovieForm {
+  width: 40vh;
+}
+
+.movie-card {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 500px;
+  max-width: 300px;
+  transition: top 2s ease 0s;
+  -webkit-transition: top 2s ease 0s;
+  overflow-y: hidden;
+}
+
+.movie-card-image {
+  object-fit: cover;
+  width: 100%;
+  min-height: 500px;
+}
+
+.movie-card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  padding: 15px;
+  top: 500px;
+  color: white;
+  background: linear-gradient(rgba(129, 11, 11, 0.8), rgba(0, 0, 0, 0.8));
+  min-height: 500px;
+  width: 100%;
+  transition: top 0.5s ease 0s;
+  -webkit-transition: top 0.5s ease 0s;
+}
+
+.movie-card:hover .movie-card-description {
+  top: 0;
+}
+
+.movie-card-description p {
+  margin: 15px 0;
+}
+
+.btn-del {
+  margin-right: 200px;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.link-nav {
+  color: red;
+}
+
+.link-nav:hover {
+  color: rgb(255, 73, 73);
+  text-decoration: none;
+}
+
+.detail-image {
+  width: 100%;
+}
+
+.list-actor {
+  list-style: none;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.loading-icon {
+  min-height: 100vh;
+  padding-bottom: 48px;
+}
+
+.text-red {
+  color: red;
+}
+
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: rgb(185, 1, 1);
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+/* 
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="movie-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjMxOTM1OTI4MV5BMl5BanBnXkFtZTgwODE5OTYxMDI@.jpg" alt="" class="movie-card-image">
+        <div class="movie-card-description">
+          <h1>
+            Fantastic Beasts and Where to Find Them
+          </h1> 
+          <p>
+            2016
+          </p>
+          <p>
+            The adventures of writer Newt Scamander in New York's secret community of ...
+          </p>
+
+          <p>
+            Length: 2h 12min
+          </p>
+
+          <p>
+            Rating: 7.3      
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="movie-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjMxOTM1OTI4MV5BMl5BanBnXkFtZTgwODE5OTYxMDI@.jpg" alt="" class="movie-card-image">
+        <div class="movie-card-description">
+          <h1>
+            Fantastic Beasts and Where to Find Them
+          </h1> 
+          <p>
+            2016
+          </p>
+          <p>
+            The adventures of writer Newt Scamander in New York's secret community of ...
+          </p>
+
+          <p>
+            Length: 2h 12min
+          </p>
+
+          <p>
+            Rating: 7.3      
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="movie-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjMxOTM1OTI4MV5BMl5BanBnXkFtZTgwODE5OTYxMDI@.jpg" alt="" class="movie-card-image">
+        <div class="movie-card-description">
+          <h1>
+            Fantastic Beasts and Where to Find Them
+          </h1> 
+          <p>
+            2016
+          </p>
+          <p>
+            The adventures of writer Newt Scamander in New York's secret community of ...
+          </p>
+
+          <p>
+            Length: 2h 12min
+          </p>
+
+          <p>
+            Rating: 7.3      
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+*/
