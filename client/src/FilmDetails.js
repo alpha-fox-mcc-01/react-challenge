@@ -22,13 +22,19 @@ export function FilmDetails(props) {
     height: "268px",
     objectFit: "fill"
   };
+
+  const arrowContainer = {
+    justifyContent: "flex-start",
+    marginTop: "2rem"
+  };
   const descContainer = {
     justifyContent: "flex-start"
   };
   const tomatoStyle = {
     width: "24px",
     height: "24px",
-    margin: "0 auto"
+    margin: "0 auto",
+    marginTop: "1rem"
   };
   const container = {
     margin: "0 auto"
@@ -61,25 +67,28 @@ export function FilmDetails(props) {
 
   const iconStyle = {
     fontSize: "48px",
-    color: "white"
+    color: "white",
+    marginTop: "1rem"
   };
   return (
     <>
       <div style={container} className="w-2/3 flex-wrap">
         <div style={upperStyles} className="flex flex-wrap bg-white shadow">
-          <Link to="/">
-            <i style={iconStyle} class="material-icons md-48 md-light">
-              arrow_back
-            </i>
-          </Link>
-          <div style={descContainer} className="w-2/3">
+          <div style={arrowContainer} className="w-1/3">
+            <Link to="/">
+              <i style={iconStyle} class="material-icons md-48 md-light">
+                arrow_back
+              </i>
+            </Link>
+          </div>
+          <div style={arrowContainer} className="w-1/3">
             <h1 style={titleStyles}>
               {details.title} ({details.release_date})
             </h1>
             <p style={fonts}>Directed by {details.director}</p>
             <br />
           </div>
-          <div style={descContainer} className="w-1/3 flex-wrap rating">
+          <div style={arrowContainer} className="w-1/3 flex-wrap rating">
             <img
               style={tomatoStyle}
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/1009px-Rotten_Tomatoes.svg.png"
