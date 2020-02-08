@@ -1,0 +1,7 @@
+#box {
+    height: 280px;
+    position: relative;
+}    
+#reviews {
+    overflow: auto;
+}

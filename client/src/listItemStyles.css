@@ -1,0 +1,42 @@
+img {
+    object-fit: cover;
+    width: 250px;
+    height: 350px;
+}
+
+#film-card {
+    margin: 1rem;
+    position: relative;
+    background: white;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+    border-radius: 12px;
+    transition: all .2s linear;
+}
+
+.img-container {
+    overflow: hidden;
+    position: relative;
+}
+
+#film-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  padding: 15px;
+  top: 500px;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  min-height: 350px;
+  width: 250px;
+  transition: top 0.5s ease 0s;
+  -webkit-transition: top 0.5s ease 0s;
+}
+
+#film-card:hover #film-description {
+    top: 0;
+}
+
+#film-description p {
+    margin: 15px 0;
+}
